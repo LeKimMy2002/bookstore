@@ -1,4 +1,4 @@
-package com.example.bookstore.Activity;
+package com.example.bookstore;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.bookstore.R;
+import com.example.bookstore.Activity.LoginActivity;
+import com.example.bookstore.Activity.SignUpActivity;
 
 public class IntroActivity extends AppCompatActivity {
 private TextView loginbtn;
@@ -24,7 +25,7 @@ private TextView signupbtn;
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(IntroActivity.this,LoginActivity.class));
+                startActivity(new Intent(IntroActivity.this, LoginActivity.class));
             }
         });
 
