@@ -5,10 +5,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.example.bookstore.Adapter.CartListAdapter;
 import com.example.bookstore.Helper.ManagementCart;
+import com.example.bookstore.Interface.ChangeNumberItemsListener;
 import com.example.bookstore.R;
 
 public class CartActivity extends AppCompatActivity {
@@ -33,11 +36,28 @@ public class CartActivity extends AppCompatActivity {
     private void initList() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         recyclerViewList.setLayoutManager(linearLayoutManager);
+        calculateCard();
+
+        adapter = new CartListAdapter(managementCart.getListCart(), this, new ChangeNumberItemsListener() {
+            @Override
+            public void changed() {
+                calculateCard();
+            }
+        });
+
+        recyclerViewList.setAdapter(adapter);
+        if (managementCart.getListCart().isEmpty()){
+            emptyTxt.setVisibility(View.VISIBLE);
+            scrollView.setVisibility(View.GONE);
+        }else{
+            emptyTxt.setVisibility(View.GONE);
+            scrollView.setVisibility(View.VISIBLE);
+        }
     }
 
     private void calculateCard() {
-        double percentTax = 0.02;   //you can change this item for tax price
-        double delivery = 10;       // can change this item you need price for delivery
+        double percentTax = 0.02;
+        double delivery = 10;
 
         tax=Math.round((managementCart.getTotalFee()*percentTax)*100.0)/100.0;
         double total = Math.round((managementCart.getTotalFee()+tax+delivery)*100.0)/100.0;

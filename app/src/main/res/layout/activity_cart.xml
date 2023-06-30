@@ -58,7 +58,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/textView24"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -71,7 +71,7 @@
                         android:id="@+id/totalFeeTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$0"
+                        android:text="0 VNĐ"
                         android:textColor="#581c87"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -88,7 +88,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/textView25"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -101,7 +101,7 @@
                         android:id="@+id/deliveryTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$0"
+                        android:text="0 VNĐ"
                         android:textColor="#581c87"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -118,7 +118,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/textView27"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -131,7 +131,7 @@
                         android:id="@+id/taxTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$0"
+                        android:text="0 VNĐ"
                         android:textColor="#581c87"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -171,7 +171,7 @@
                         android:id="@+id/totalTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$0"
+                        android:text="0 VNĐ"
                         android:textColor="#581c87"
                         android:textSize="30sp"
                         android:textStyle="bold" />

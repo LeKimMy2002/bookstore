@@ -42,13 +42,14 @@ public class ShowDetailActivity extends AppCompatActivity {
         feeTxt.setText("VNĐ"+object.getFee());
         descriptionTxt.setText(object.getDescription());
         numberOrderTxt.setText(String.valueOf(numberOrder));
+        totalPriceTxt.setText(String.valueOf(numberOrder*object.getFee()));
 
         plusBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 numberOrder = numberOrder +1;
                 numberOrderTxt.setText(String.valueOf(numberOrder));
-                totalPriceTxt.setText(String.valueOf(numberOrder));
+                totalPriceTxt.setText(String.valueOf(numberOrder*object.getFee()));
             }
         });
 
@@ -75,13 +76,13 @@ public class ShowDetailActivity extends AppCompatActivity {
 
     private void iniView() {
         addToCartBtn = findViewById(R.id.addToCartBtn);
-        titleTxt = findViewById(R.id.titleTxt);
+        picBook = findViewById(R.id.bookPic);
+        titleTxt = findViewById(R.id.textView20);
         feeTxt = findViewById(R.id.priceTxt);
         descriptionTxt = findViewById(R.id.descriptionTxt);
         numberOrderTxt = findViewById(R.id.numberOrderTxt);
         plusBtn = findViewById(R.id.plusCardBtn);
         minusBtn = findViewById(R.id.minusCardBtn);
-        picBook = findViewById(R.id.bookPic);
         totalPriceTxt = findViewById(R.id.totalPriceTxt);
 
 
